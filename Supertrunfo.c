@@ -22,11 +22,6 @@ int main() {
     char estado2[10], carta_2[5], nomedacidade2[20];
     float area2, PIB2, densidade2, PIBpc2, SuperPoder2;
 
-    //Variáveis comparativas
-
-    unsigned int resultadoPOP, ResultadoArea, ResultadoPIB, ResultadoTuri, 
-    ResultadoDens, ResultadoPerc, ResultadoPower;
-
     // Saudação
 
     printf("*** Bem-vindo(a) ao Super Trunfo ***\n\n");
@@ -137,28 +132,44 @@ int main() {
     // Comparação entre cartas
 
     printf("*** Vamos a Batalha ***\n\n");
-    printf("*** Caso resultado da disputa das características de '1' o primeiro jogador é o vencedor.\n\nCaso o resultado seja '0' o 2º jogador é o vencedor ***");
+    
+    if (populacao1 > populacao2){
+        printf("Na disputa de populações com: %d O vencedor é o: Player 1\n", populacao1);}
+    
+    else {
+        printf("Na disputa de populações com: %d O vencedor é o: Player 2\n", populacao2);}
 
-    resultadoPOP = populacao1 > populacao2;
-    printf("Na disputa de populações o vencedor é: %d\n", resultadoPOP);
 
-    ResultadoArea = area1 > area2;
-    printf("Na disputa de áreas o vencedor é: %d\n", ResultadoArea);
+    if (area1 > area2){
+        printf("Na disputa de áreas com: %.2f O vencedor é o: Player 1\n", area1);}
+    
+    else {printf("Na disputa de áreas com: %.2f O vencedor é o: Player 2\n", area2);}
+    
+    if (PIB1 > PIB2){
+        printf("Na disputa de PIB com: %.2f O vencedor é o: Player 1\n", PIB1);}
+    
+    else {printf("Na disputa de PIB com: %.2f O vencedor é o: Player 2\n", PIB2);}
+    
+    if (turistico1 > turistico2){
+        printf("Na disputa de pontos turísticos com: %d O vencedor é o: Player 1\n", turistico1);}
+    
+    else {printf("Na disputa de pontos turísticos com: %d O vencedor é o: Player 2\n", turistico2);}
+  
+    if (densidade1 < densidade2){
+        printf("Na disputa de densidade demográfica com: %.2f O vencedor é o: Player 1\n", densidade1);}
+    
+    else {printf("Na disputa de densidade demográfica com: %.2f O vencedor é o: Player 2\n", densidade2);}
+   
+    if (PIBpc1 > PIBpc2){
+        printf("Na disputa de PIB per capita com: %.2f O vencedor é o: Player 1\n", PIBpc1);}
+    
+    else {printf("Na disputa de PIB per capita com: %.2f O vencedor é o: Player 2\n", PIBpc2);}
 
-    ResultadoPIB = PIB1 > PIB2;
-    printf("Na disputa de PIB o vencedor é: %d\n", ResultadoPIB);
-
-    ResultadoTuri = turistico1 > turistico2;
-    printf("Na disputa de pontos turísticos o vencedor é: %d\n", ResultadoTuri);
-
-    ResultadoDens = densidade1 < densidade2;
-    printf("Na disputa de densidade demográfica o vencedor é: %d\n", ResultadoDens);
-
-    ResultadoPerc = PIBpc1 > PIBpc2;
-    printf("Na disputa de PIB per capita o vencedor é: %d\n", ResultadoPerc);
-
-    ResultadoPower = SuperPoder1 > SuperPoder2;
-    printf("Na disputa de super poderes o vencedor é: %d\n", ResultadoPower);
-
+    if (SuperPoder1 > SuperPoder2){
+        printf("Na disputa de super poderes com: %.2f O vencedor é o: Player 1\n", SuperPoder1);}
+    
+    else {printf("Na disputa de super poderes com: %.2f O vencedor é o: Player 2\n", SuperPoder2);}
+   
 
     return 0;
+}
